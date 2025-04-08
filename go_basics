@@ -1,1 +1,31 @@
 
+Go Compiler
+As a compiled language, Go does not run until its source file is processed through a separate software called a compiler to produce a final executable program. The Go compiler can be accessed on the command line via a generic command such as:
+
+go <command> [arguments]
+
+go run
+It compiles and executes the main package which contains the .go file specified on the terminal. This command compiles the statement and stores it in a temporary file. The syntax for the command is -
+
+go run filename. go
+
+
+go build
+go build scrutinizes the files in the directory to see which file (from the list) or part of the file is actually included in the main package. It is usually used to compile the packages and dependencies that are user-defined i.e. defined by you or pre-defined ones but you used in your file. When you have the binary file you made for the application or part of the bigger project to use later or it is a file that can be used in other applications or want to excess this file remotely then go build is the command for you. Using this command helps you build a different and permanent binary file in the current directory of your project/application. The syntax is -
+
+go build filename. go
+
+1 - The func keyword denotes the start of a function declaration.
+
+Different ways of importing packages.
+package main
+
+import (
+  "fmt"
+  t "time"
+)
+
+func main() {
+	fmt.Println("Hello World")
+  fmt.Println(t.Now())
+}
